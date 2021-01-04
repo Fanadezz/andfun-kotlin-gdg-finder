@@ -7,8 +7,36 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <!--add both android:fontFamily & fontFamily as the parent theme uses both-->
         <item name="android:fontFamily">@font/lobster_two</item>
         <item name="fontFamily">@font/lobster_two</item>
+
+
     </style>
 
+
+    <!--EXPLICIT PARENT-->
+
+
+    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline6">
+
+        <!--Override parent them attributes-->
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+
+    <!--IMPLICIT PARENT-->
+
+
+    <style name="TextAppearance.Subtitle" parent="TextAppearance.Title">
+
+        <!--Override parent them attributes-->
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+
 </resources>
+
+
