@@ -11,29 +11,17 @@
         <item name="android:fontFamily">@font/lobster_two</item>
         <item name="fontFamily">@font/lobster_two</item>
 
+        <!--Define a custom TextAppearance H6 as an attribute on theme-->
+        <item name="android:textAppearance">@style/MyCustomHeadline6</item>
 
     </style>
 
 
-    <!--EXPLICIT PARENT-->
+    <!--Custom style - we need to define the parent style-->
+    <style name="MyCustomHeadline6" parent="TextAppearance.MaterialComponents.Headline6">
 
-
-    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline6">
-
-        <!--Override parent them attributes-->
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">#555555</item>
-    </style>
-
-
-    <!--IMPLICIT PARENT-->
-
-
-    <style name="TextAppearance.Subtitle" parent="TextAppearance.Title">
-
-        <!--Override parent them attributes-->
+        <!--override TextAppearance H6 here-->
         <item name="android:textSize">18sp</item>
-
     </style>
 
 

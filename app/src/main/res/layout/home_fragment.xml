@@ -40,11 +40,14 @@
 
                 <TextView
                     android:id="@+id/title"
-                    style="@style/TextAppearance.Title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="@string/about_google_developer_groups"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+
+
+
                     app:layout_constraintEnd_toStartOf="@+id/end_grid"
                     app:layout_constraintStart_toStartOf="@+id/start_grid"
                     app:layout_constraintTop_toBottomOf="@id/image" />
@@ -61,11 +64,11 @@
 
                 <TextView
                     android:id="@+id/subtitle"
-                    style="@style/TextAppearance.Subtitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="13dp"
                     android:text="@string/gdgs_are"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     app:layout_constraintEnd_toStartOf="@id/end_grid"
                     app:layout_constraintStart_toEndOf="@id/start_grid"
                     app:layout_constraintTop_toBottomOf="@+id/intro_text" />
@@ -111,11 +114,11 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
-            app:srcCompat="@drawable/ic_gdg"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
             android:onClick="@{() -> viewModel.onFabClicked()}"
-            android:layout_gravity="end|bottom"
-            android:layout_height="wrap_content" />
+            app:srcCompat="@drawable/ic_gdg" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
