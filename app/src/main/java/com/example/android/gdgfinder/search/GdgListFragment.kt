@@ -57,6 +57,19 @@ class GdgListFragment : Fragment() {
             }
         })
 
+        //Add Observer to observe list changes
+        viewModel.regionList.observe(viewLifecycleOwner){
+
+            data -> data ?: return@observe
+
+            
+        }
+
+
+
+
+
+
         setHasOptionsMenu(true)
         return binding.root
     }
