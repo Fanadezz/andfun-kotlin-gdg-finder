@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.example.android.gdgfinder.R
 import androidx.lifecycle.ViewModelProvider
 import com.example.android.gdgfinder.databinding.FragmentGdgListBinding
 import com.google.android.gms.location.*
@@ -18,6 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 private const val LOCATION_PERMISSION_REQUEST = 1
 
 private const val LOCATION_PERMISSION = "android.permission.ACCESS_FINE_LOCATION"
+
 
 class GdgListFragment : Fragment() {
 
@@ -62,7 +64,23 @@ class GdgListFragment : Fragment() {
 
             data -> data ?: return@observe
 
-            
+            //STEP 1: Make a new Chip View for each item in the list
+
+            val chipGroup = binding.regionsList
+            val chipInflater = LayoutInflater.from(chipGroup.context)
+
+            //create a list of Chips
+            val children = data.map {
+                regionName ->
+                val chip = chipInflater.inflate(R.layout.region, chipGroup, false)
+                chip.text = regionName
+                chip.tag =  regionName
+              
+            }
+
+            //STEP 2: Remove any views already in the ChipGroup
+
+            //STEP 3: Add the new children to the ChipGroup
         }
 
 
